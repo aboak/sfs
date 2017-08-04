@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.fandm.enovak.sfs.FileBrowser">
+
+    <TextView android:id="@+id/file_browser_tv_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WARNING!  SFS service is turned off.\n  Some files may not be available."
+        android:background="#e8bf5c"
+        android:textAlignment="center"
+        android:visibility="gone"
+        />
+
+    <ProgressBar android:id="@+id/file_browser_pb_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyle"
+        android:layout_below="@+id/file_browser_tv_warning"/>
+
+    <ListView android:id="@+id/file_browser_lv_files"
+        android:layout_below="@+id/file_browser_pb_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
